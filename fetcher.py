@@ -80,9 +80,9 @@ def main(argv):
         #lt_headers = []
 
         lv_cookies = {
-            'PHPSESSID': 'svc4f7mtp6lmd6it6kr9ci50p0',
-            'cookiesession1': '52CC16C5KDVB2G8OCI2KS9XKAEUI639F',
-            'ci_session': 'a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%22db5d67d551f429e2f3a8fb6c5496aaee%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%22103.7.15.100%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A115%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F73.0.3683.103+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1555680433%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D1aa4a830dc2616127f4e9f7557bf6dda',
+            'PHPSESSID': '9e7o76vqm58eko31pbi3n82pu1',
+            'cookiesession1': '52CC16C5LVZCRPUOGEJQNB3AMDK781A8',
+            'ci_session': 'a%3A5%3A%7Bs%3A10%3A%22session_id%22%3Bs%3A32%3A%228f7a3746f330b4f5c1bb8cd434c63ed3%22%3Bs%3A10%3A%22ip_address%22%3Bs%3A12%3A%22103.7.15.100%22%3Bs%3A10%3A%22user_agent%22%3Bs%3A115%3A%22Mozilla%2F5.0+%28Windows+NT+10.0%3B+Win64%3B+x64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F73.0.3683.103+Safari%2F537.36%22%3Bs%3A13%3A%22last_activity%22%3Bi%3A1556065208%3Bs%3A9%3A%22user_data%22%3Bs%3A0%3A%22%22%3B%7D5f7e5c53d6dbe752d5fca3534c689c9f',
         }
 
         lv_headers = {
@@ -141,7 +141,7 @@ def main(argv):
                             del r
                             
                     else:
-                        logging.exception('Requests Parameter Error: {}'.format(r))
+                        logging.exception('Requests Parameter Error: {} - {}'.format(r, doc_czones_qry.get('_id')))
                         break
                     
                 else:

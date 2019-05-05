@@ -161,8 +161,9 @@ def prayertime(lv_zones):
                 msg = '{}\n'.format(msg)
                 msg = '{}{:<6} - {} {}'.format(msg, lv_fazfor.get('ftypes'), localtime.strftime('%H:%M'), lv_txzone)
 
-    msg = '{}```'.format(msg)
-    
+    msg = '{}```\n\n'.format(msg)
+    msg = '{}[https://t.me/ID_AzanBot](https://t.me/ID_AzanBot)'.format(msg)
+
     return msg
 
 
@@ -419,7 +420,8 @@ def button(bot, update):
         bot.editMessageText(text=msg,
                             chat_id=chat_id,
                             message_id=message_id, 
-                            parse_mode='Markdown')
+                            parse_mode='Markdown', 
+                            disable_web_page_preview=True)
 
     else:
         bot.editMessageText(text='Error! No definition for {}'.format(query.data),
@@ -795,7 +797,7 @@ def today(bot, update):
         lv_zones = doc_cusers_qry.get('czones_id')
         if lv_zones is not None:
             msg = prayertime(lv_zones)
-            update.message.reply_text(msg, parse_mode='Markdown')
+            update.message.reply_text(msg, parse_mode='Markdown', disable_web_page_preview=True)
         else:
             update.message.reply_text('Setting Zona belum dilakukan.\nGunakan perintah  /setting  untuk melakukan setting Zona.')   
 
